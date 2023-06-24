@@ -1,0 +1,160 @@
+/* Style the topbar container */
+.topbar {
+  background-color: #333;
+  height: 80px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Style the topbar icon */
+.topbar-icon {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+/* Style the logo */
+.logo {
+  height: 40px;
+}
+
+/* Style the topbar navigation */
+.topbar-navigation {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.topbar-navigation a {
+  color: #888;
+  text-decoration: none;
+  font-size: 18px;
+  display: inline-block;
+  padding: 10px 0;
+}
+
+
+/* Style the navigation list */
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Style the navigation list items */
+.list li {
+  margin-right: 30px;
+}
+
+/* Style the Creator link */
+.Creator {
+  margin-left: 30px;
+}
+
+/* Style the search box */
+.searchBox {
+  margin-left: 30px;
+}
+
+/* Style the search input */
+.searchBox input[type="text"] {
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 20px;
+  width: 300px;
+}
+
+/* Style the search button */
+.searchBox button {
+  background-color: #0072c6;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 20px;
+  margin-left: 10px;
+}
+
+/* Media queries for responsive design */
+@media screen and (max-width: 768px) {
+  .list li {
+    margin-right: 20px;
+  }
+  .Creator, .searchBox {
+    display: none;
+  }
+}
+
+
+
+/* Style the promotion container */
+.promotion {
+  padding: 50px;
+  text-align: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin-bottom: 50px;
+  width: 100%;
+  height: 90%;
+  position: fixed;
+  background-image: url('/images/bg.jpg');
+}
+
+/* Style the promotional page */
+.promotional-page {
+  background-size: cover;
+  background-position: center;
+  padding: 50px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+/* Style the promotional words */
+.promotional-words {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Style the title */
+.promotional-words .title {
+  color: #333;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Style the slogan */
+.promotional-words .slogan {
+  color: #666;
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+/* Media queries for responsive design */
+@media screen and (max-width: 768px) {
+  .promotion {
+    padding: 30px;
+  }
+  
+  .promotion-page {
+    padding: 30px;
+  }
+  
+  .promotional-words .title {
+    font-size: 1.5rem;
+  }
+  
+  .promotional-words .slogan {
+    font-size: 1rem;
+  }
+}

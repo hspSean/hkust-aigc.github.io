@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang = "en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta name = "description" content="A studio that shows videos produced by generative AI">
+  <meta name = "keywords" content="Generative AI,video,github">
+  <meta name = "viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title> HKUST AIGC Studio</title>
+
+  <link rel = "stylesheet" href = "/css/reset.css">
+  <link rel = "stylesheet" href = "/css/index.css">
+</head>
+
+<body>
+  
+  <!--top navigation-->
+
+  <div class = "topbar">
+    
+    <div class = "container clearfix">
+      <div class = "topbar-icon leftfix">
+        <a href = "/"> <img class = "logo" src="/images/logo.png" alt="HKUST AIGC logo"> </a>
+      </div>
+
+      <div class = "topbar-navigation rightfix">
+        <ul class = "list clearfix">
+          <li> 
+            <a href= "/explore"> Explore</a> 
+          </li>
+          <li> 
+            <a href="/showcase" > Showcase </a> 
+          </li>
+        </ul>
+
+        <div class="Creator">
+          <a href="/videoCreators" > Create </a> 
+        </div>
+
+        <div class = "searchBox">
+          <form action = "/index.html">
+            <input type = "text" name = "searchText" value = "Search HKUST AIGC Studio">
+            <button> search </button>
+          </form> 
+        </div>
+        
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class = "videoCrafter">
+    <script type="module"
+      src="https://gradio.s3-us-west-2.amazonaws.com/3.35.2/gradio.js">
+    </script>
+    <gradio-app src="https://videocrafter-videocrafter.hf.space/"></gradio-app>
+  </div>
+
+
+  <!--FateZeroEdit-->
+  <div class = "FateZeroEdit">
+    <script type="module"
+      src="https://gradio.s3-us-west-2.amazonaws.com/3.35.2/gradio.js">
+    </script>
+    <gradio-app src="https://chenyangqi-fatezero.hf.space/"></gradio-app>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang = "en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta name = "description" content="A studio that shows videos produced by generative AI">
+  <meta name = "keywords" content="Generative AI,video,github">
+  <meta name = "viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title> HKUST AIGC Studio</title>
+
+  <link rel = "stylesheet" href = "/css/reset.css">
+  <link rel = "stylesheet" href = "/css/index.css">
+  <link rel = "stylesheet" href = "/css/explore.css">
+</head>
+
+<body>
+  
+  <!--top navigation-->
+
+  <div class = "topbar">
+    
+    <div class = "container clearfix">
+      <div class = "topbar-icon leftfix">
+        <a href = "/"> <img class = "logo" src="/images/logo.png" alt="HKUST AIGC logo"> </a>
+      </div>
+
+      <div class = "topbar-navigation rightfix">
+        <ul class = "list clearfix">
+          <li> 
+            <a href= "/explore"> Explore</a> 
+          </li>
+          <li> 
+            <a href="/showcase" > Showcase </a> 
+          </li>
+        </ul>
+
+        <div class = "Creator">
+          <a href="/videoCreators" > Create </a> 
+        </div>
+
+        <div class="searchBox">
+          <form action = "/index.html">
+            <input type = "text" name = "searchText" value = "Search HKUST AIGC Studio">
+            <button> search </button>
+          </form> 
+        </div>
+        
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!--video showcase-->
+
+  <!--Studio title-->
+
+  <div class = "explore">
+    <div class = "explore-page">
+      <div class = "explore-words"> 
+        <h1> 
+          <span class = "title"> HKUST AIGC Studio </span>
+          Create your video without effort
+        </h1> 
+      </div>
+    </div>
+
+    <!--filter bar-->
+    <div class="filter-bar">
+      <div class="tag-filter">
+        <button class="active" data-filter="all">All</button>
+        <button data-filter="dance">Dance</button>
+        <button data-filter="music">Music</button>
+        <button data-filter="animals">Animals</button>
+      </div>
+    </div>
+    
+    <!--video grid-->
+
+    <div class="video-grid">
+      <div class="video-item">
+        <video src="/videos/RobotDancing.mp4" alt="Video 1" controls>
+        <h2>Video 1</h2>
+      </div>
+
+      <div class="video-item">
+        <video src="/videos/AstronautRiding.mp4" alt="Video 2" controls>
+        <h2>Video 2</h2>
+      </div>
+      
+      <div class="video-item">
+        <video src="/videos/HorseDrinking.mp4" alt="Video 2" controls>
+        <h2>Video 3</h2>
+      </div>
+      
+      <div class="video-item">
+        <video src="/videos/MonkeyPiano.mp4" alt="Video 2" controls>
+        <h2>Video 4</h2>
+      </div>
+
+    </div> 
+
+  </div>
+
+</body>
+
+</html>
