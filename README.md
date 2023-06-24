@@ -1,4 +1,4 @@
-# sunfly04.github.io
+# hkust-aigc.github.io
 
 ### 2023.6.24
 
