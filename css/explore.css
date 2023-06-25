@@ -4,28 +4,26 @@
 
 /* Studio Title */
 .explore {
-  background-color: #333;
   color: #fff;
-  padding: 20px 0;
+  padding: 100px 0;
 }
 
 .explore h1 {
   text-align: center;
   font-size: 32px;
   margin-bottom: 15px;
+  color: rgb(155, 140, 140)
 }
 
 .title {
-  color: #de45e0;
+  color: black;
 }
 
 /* Filter Bar */
 .filter-bar {
   display: flex;
   justify-content: center;
-  background-color: #fff;
   padding: 15px 0;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .tag-filter {
@@ -50,6 +48,8 @@
 
 /* Video Grid */
 .video-grid {
+  width: 70%;
+  margin-left: 15%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
