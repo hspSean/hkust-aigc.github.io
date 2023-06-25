@@ -1,0 +1,139 @@
+/* Style the topbar container */
+.topbar {
+  background-color: #333;
+  height: 80px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Style the topbar icon */
+.topbar-icon {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+/* Style the logo */
+.logo {
+  height: 40px;
+}
+
+/* Style the topbar navigation */
+.topbar-navigation {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.topbar-navigation a {
+  color: #888;
+  text-decoration: none;
+  font-size: 18px;
+  display: inline-block;
+  padding: 10px 0;
+}
+
+.topbar-navigation .Creator a{
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  display: inline-block;
+  padding: 10px 0;
+}
+
+/* Style the navigation list */
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Style the navigation list items */
+.list li {
+  margin-right: 30px;
+}
+
+/* Style the Creator */
+
+.Creator {
+  background-color: #cc2d84cc;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.Creator::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: rotate(45deg);
+  z-index: 1;
+  animation: pulse 1.5s ease-out;
+}
+
+.Creator a {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(0);
+    opacity: 1;
+  }
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* Style the search box */
+.searchBox {
+  margin-left: 30px;
+}
+
+/* Style the search input */
+.searchBox input[type="text"] {
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 20px;
+  width: 300px;
+}
+
+/* Style the search button */
+.searchBox button {
+  background-color: #0072c6;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 20px;
+  margin-left: 10px;
+}
+
+/* Media queries for responsive design */
+@media screen and (max-width: 768px) {
+  .list li {
+    margin-right: 20px;
+  }
+  .Creator, .searchBox {
+    display: none;
+  }
+}
