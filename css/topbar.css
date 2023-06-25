@@ -112,6 +112,10 @@
   width: 300px;
 }
 
+.searchBox input[type="text"]::placeholder {
+  opacity: 0.5;
+}
+
 /* Style the search button */
 .searchBox button {
   background-color: #0072c6;

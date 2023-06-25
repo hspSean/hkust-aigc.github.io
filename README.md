@@ -6,9 +6,10 @@ This is our very early demo. Just finish some front-end code. By *Sunfly*
 
 ### 2023.6.25
 
+
 Rebuild the home page and update the logo
 
-Update the CSS of explore page
+Update the CSS of explore page and the topbar
 
 Unify our website sytle and add some animation
 
