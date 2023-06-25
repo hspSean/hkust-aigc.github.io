@@ -36,7 +36,7 @@
 }
 
 .promotional-words .title-words {
-  font-size: 10px;
+  font-size: 15px;
   font-weight: bold;
 }
 
@@ -69,7 +69,7 @@
 }
 
 .start-creating button:hover {
-  background-color: #e0494c;
+  background-color: #e0494ccd;
 }
 
 /* Media queries for responsive design */

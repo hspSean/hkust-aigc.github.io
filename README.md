@@ -6,14 +6,21 @@ This is our very early demo. Just finish some front-end code. By *Sunfly*
 
 ### 2023.6.25
 
-
 Rebuild the home page and update the logo
 
-Update the CSS of explore page and the topbar
+Update the CSS code of explore page and the topbar
 
 Unify our website sytle and add some animation
 
 By *Sunfly*
+
+### 2023.6.26
+
+write the ~~very~~ preliminary showcase page
+
+fix some animations for buttons
+
+update the CSS code for explore page
 
 #### Our To-Do List
 
