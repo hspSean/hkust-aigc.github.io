@@ -6,7 +6,7 @@ This is our very early demo. Just finish some front-end code. By *Sunfly*
 
 #### Our To-Do List
 
-1. Design our logo and slogan
+1. Design ~~our logo~~ and slogan
 2. Fix the bug of Create Page to make huggingface work fine (or other ways to use the AIGC models?)
 3. Consider whether we need showcase page and what other functions the website needs
 4. finish the search function
