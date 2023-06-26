@@ -19,3 +19,21 @@ body {
   display: flex;
   justify-content: space-between;
 }
+
+.page {
+  padding: 100px 0;
+  text-align: center;
+}
+
+.page-title h1 {
+  text-align: center;
+  font-size: 23px;
+  margin-bottom: 15px;
+  color: rgb(155, 140, 140)
+}
+
+.title {
+  color: black;
+  font-size: 35px;
+  margin-bottom: 13px;
+}

@@ -1,0 +1,52 @@
+/* Style for the search function input box */
+.searchVideo-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 50px;
+  width: 50%;
+  margin-left: 25%;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.searchVideo-box input[type="search"] {
+  width: 100%;
+  font-size: 16px;
+  padding: 20px;
+  border-radius: 20px;
+  border: none;
+}
+
+.searchBox input[type="text"]::placeholder {
+  opacity: 0.5;
+}
+
+.searchVideo-box button {
+  margin-left: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff5a60b4;
+  cursor: pointer;
+}
+
+.searchVideo-box button:disabled {
+  background-color: #ccc;
+  cursor: default;
+}
+
+/* Style for the search function icon */
+.search-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
+}
+
+.mdi-icon path {
+  fill: #fff;
+}

@@ -16,11 +16,15 @@ By *Sunfly*
 
 ### 2023.6.26
 
-write the ~~very~~ preliminary showcase page
+Write the ~~very~~ preliminary showcase page and search page
 
-fix some animations for buttons
+Fix some animations for buttons
 
-update the CSS code for explore page
+Update the CSS for explore page
+
+Modify the structure of CSS and improve code reusability
+
+By *Sunfly*
 
 #### Our To-Do List
 
