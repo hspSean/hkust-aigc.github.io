@@ -26,6 +26,10 @@ Modify the structure of CSS and improve code reusability
 
 By *Sunfly*
 
+### 2023.7.6
+
+Write 404 page and fix some mistakes
+
 #### Our To-Do List
 
 1. Design ~~our logo~~ and slogan
