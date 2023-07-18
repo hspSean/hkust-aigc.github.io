@@ -36,6 +36,8 @@ By *Sunfly*
 
 Rebuild the videoCreators page
 
+Write the tutorial css style
+
 #### Our To-Do List
 
 ~~1. Design our logo and slogan~~
