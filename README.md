@@ -40,7 +40,7 @@ Write the tutorial css style
 
 ### 2023.7.25
 
-Update our logo thx to *Amandika*
+Update our logo thx to *Amadika*
 
 Rewrite the showcase page 
 
