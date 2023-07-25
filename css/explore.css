@@ -24,8 +24,7 @@
   transition: background-color 0.3s;
 }
 
-.tag-filter button.active,
-.tag-filter button:hover {
+.tag-filter button.active {
   background-color: #259d6f;
 }
 

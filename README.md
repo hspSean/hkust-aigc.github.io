@@ -38,13 +38,21 @@ Rebuild the videoCreators page
 
 Write the tutorial css style
 
+### 2023.7.25
+
+Update our logo thx to *Amandika*
+
+Rewrite the showcase page 
+
+Finish the tag filter function
+
 #### Our To-Do List
 
 ~~1. Design our logo and slogan~~
-2. Rebuild the create page
+~~2. Rebuild the create page~~
 ~~3. Consider whether we need showcase page and what other functions the website needs~~
 4. Finish the search function
-5. Finish the tag filter
-6. Write Showcase for different tools
+~~5. Finish the tag filter~~
+~~6. Write Showcase for different tools~~
 7. 
 

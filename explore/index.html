@@ -76,19 +76,17 @@
     <div class="filter-bar">
 
       <div class="tag-filter">
-        <button class="active" data-filter="all">
+        <button class="filter-btn active" data-filter="all">
           All
         </button>
-
-        <button data-filter="dance">
-          #dance
+        <button class="filter-btn" data-filter="human">
+          #human
         </button>
-        <button data-filter="music">
-          #music
+        <button class="filter-btn" data-filter="robot">
+          #robot
         </button>
-        <button data-filter="animals">
-          #animals
-
+        <button class="filter-btn" data-filter="animal">
+          #animal
         </button>
       </div>
 
@@ -97,29 +95,77 @@
     <!--video grid-->
 
     <div class="video-grid">
-      <div class="video-item">
-        <video src="/videos/RobotDancing.mp4" alt="Video 1" controls>
+      <div class="video-item" data-category="robot">
+        <video src="/videos/VideoCrafter/RobotDancing.mp4" alt="Video 1" controls>
         <h2>Video 1</h2>
       </div>
 
-      <div class="video-item">
-        <video src="/videos/AstronautRiding.mp4" alt="Video 2" controls>
+      <div class="video-item" data-category="human">
+        <video src="/videos/VideoCrafter/AstronautRiding.mp4" alt="Video 2" controls>
         <h2>Video 2</h2>
       </div>
       
-      <div class="video-item">
-        <video src="/videos/HorseDrinking.mp4" alt="Video 2" controls>
+      <div class="video-item" data-category="animal">
+        <video src="/videos/VideoCrafter/MonkeyPiano.mp4" alt="Video 3" controls>
         <h2>Video 3</h2>
       </div>
       
-      <div class="video-item">
-        <video src="/videos/MonkeyPiano.mp4" alt="Video 2" controls>
+      <div class="video-item" data-category="animal">
+        <video src="/videos/VideoCrafter/HorseDrinking.mp4" alt="Video 4" controls>
         <h2>Video 4</h2>
+      </div>
+
+      <div class="video-item" data-category="animal">
+        <video src="/videos/Text2Video-Zero/catWalking.MP4" alt="Video 5" controls>
+        <h2>Video 5</h2>
+      </div>
+
+      <div class="video-item" data-category="animal">
+        <video src="/videos/Text2Video-Zero/pandaDancing.mp4" alt="Video 6" controls>
+        <h2>Video 6</h2>
+      </div>
+
+      <div class="video-item" data-category="animal">
+        <video src="/videos/Text2Video-Zero/cuteCatWalking.mp4" alt="Video 7" controls>
+        <h2>Video 7</h2>
+      </div>
+
+      <div class="video-item" data-category="animal">
+        <video src="/videos/Text2Video-Zero/dogReading.mp4" alt="Video 8" controls>
+        <h2>Video 8</h2>
       </div>
 
     </div> 
 
   </div>
+
+  <script>
+    const filterBtns = document.querySelectorAll(".filter-btn");
+    filterBtns.forEach(btn => {
+
+      btn.addEventListener("click", function() {
+        const filter = this.getAttribute("data-filter");
+      
+        filterBtns.forEach(btn => btn.classList.remove("active"));
+        
+        this.classList.add("active");
+
+        const projectItems = document.querySelectorAll(".video-item");
+
+        projectItems.forEach(item => {
+          if(filter === 'all') {
+            item.style.display = "block";
+          } else if(item.getAttribute("data-category") === filter) {
+            item.style.display = "block";
+          } else {
+            item.style.display = "none";
+          }
+        });
+
+      });
+
+    });
+  </script>
 
 </body>
 
