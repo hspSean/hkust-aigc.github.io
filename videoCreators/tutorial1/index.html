@@ -89,9 +89,16 @@
         </h4>
           &nbsp; &nbsp; There are a couple of ways you ccan lay around with VideoCrafter. You can run it locally, run a demo on HuggingFace or
           the Google Colabatory notebook.
-          Here's a guide on how to get the results you want from VideoCrafter.
-          
-          The LoRa scale adjusts for :
+          Here's a guide on how to get the results you want from VideoCrafter. 
+    
+          <ul>
+              <li>
+                Sampling steps : the number of sampling steps used adjusts how much the diffusion model denoises the data (which in a diffusion model is 100% random noise) per step. At every step the model is predicting what the image is supposed to look like. Adding more steps implies that execution will take longer but at every step the model is making a probabilistic assumption based on a less noisy image.
+              </li>
+              <li> CFG scale : Stands for Coefficient of Fluctuation Growth. </li>
+              <li> ETA : </li>
+              <li> LoRA scale : </li>
+          </ul>
 
           ETA : 
 
