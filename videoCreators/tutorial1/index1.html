@@ -66,31 +66,75 @@
     <!--This a template which contains title, subtitle and text part of your article-->
     <!---->
 
+     <div class = "tutorial">
+
+    <!--The following is what you need to modify-->
+    <!--This a template which contains title, subtitle and text part of your article-->
+    <!---->
+
     <article> 
-      <h2 class = "Title"> Your Project Name </h2>
+      <h2 class = "Title"> VideoCrafter </h2>
 
       <!--The following includes a subtitle and a text-->
       <h3 class = "Subtitle"> 
-        <span> Your Subtitle </span>
+        <span> Model decomposition</span>
       </h3>
-      <p class = "Text">
-        <!--It is also recommend to wrap each paragraph with <span> tags.--> 
+      <p class = "Text"> 
         <span> 
           <!-- &nbsp is a character entity reference that stands for "non-breaking space."-->
-          &nbsp; &nbsp; Your words
+          &nbsp; &nbsp; VideoCrafter is a video creation toolbox consisting of:
+            <ul>
+                <li> A text-to-video (T2V) diffusion model : LVDM  
+                <li> A finetuning mechanism to train the LVDM on specific datasets and reduce training parameters : VideoLoRA 
+                <li> A conditional adapter based on T2I-adpater to increase the controls on video generation
+            </ul>
+          A detailed explanation of the architecture via it's components follows ahead. The best way to understand what 
+        <br>
+        <h3 class = "Subtitle"> <!-- Amadika : Add subsection to the stylesheet if you want --> 
+            <span> How to Run LVDM </span>
+        </h4>
+          &nbsp; &nbsp; There are a couple of ways you ccan lay around with VideoCrafter. You can run it locally, run a demo on HuggingFace or
+          the Google Colabatory notebook.
+          Here's a guide on how to get the results you want from VideoCrafter. 
+    
+          <ul>
+              <li>
+                Sampling steps : the number of sampling steps used adjusts how much the diffusion model denoises the data (which in a diffusion model is 100% random noise) per step. At every step the model is predicting what the image is supposed to look like. Adding more steps implies that execution will take longer but at every step the model is making a probabilistic assumption based on a less noisy image.
+              </li>
+            <!-- Mention in the paper where this comes up when you're talking about variance in the diffusion process -->
+              <li> CFG scale : Stands for Coefficient of Fluctuation Growth. Adjusting this scale adjusts how faithful the generated output is to the prompt. It quantifies the rate of change of the variance of a diffusion process. 
+            <div class = "video-grid>
+              <video src = /videos/teddy_bear_playing_piano_high_definition_4k_1.mp4" alt = "1 Sampling Step">
+            </div>
+              </li> 
+              <li> ETA : </li>
+              <li> LoRA scale : LoRA is a finetuning model that can be used to train the base diffusion model on more specialised datasets to generate results with different features.  </li>
+          </ul>
+
         </span>
       </p>
-
-      <!--You can copy the above part yourself to write the remaining parts-->
 
       <br> <!--It is used to create a line break or a new line-->
 
       <h3 class = "Subtitle">
-        <span> Your Subtitle </span>
+        <span> Diffusion models </span>
       </h3>
       <p class = "Text">
         <span>
-          &nbsp; &nbsp; Your words
+          &nbsp; &nbsp; Latent diffusion models are a type of mahcine learning model that map the characteristics of a dataset to a lower-dimensional latent space 
+          to make computations more tractable. 
+          Diffusion models work by 
+        </span>
+      </p>
+
+      <br>
+
+      <h3 class = "Subtitle">
+        <span> LoRA for finetuning </span>
+      </h3>
+      <p class = "Text">
+        <span>
+          &nbsp; &nbsp; LoRA 
         </span>
       </p>
       
@@ -109,29 +153,7 @@
       </div> -->
 
       <br>
-
-      <h3 class = "Subtitle">
-        <span> Your Subtitle </span>
-      </h3>
-      <p class = "Text">
-        <span>
-          &nbsp; &nbsp; Your words
-        </span>
-      </p>
-
-      <br>
-
-      <h3 class = "Subtitle">
-        <span> Your Subtitle </span>
-      </h3>
-      <p class = "Text">
-        <span>
-          &nbsp; &nbsp; Your words
-        </span>
-      </p>
-
-      <br> 
-
+      
       <h3 class = "Subtitle">
         <span> Your Subtitle </span>
       </h3>
