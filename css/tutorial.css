@@ -61,7 +61,7 @@
 }
 
 .video-grid {
-  margin-left: 15%;
+  margin-left: 10%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }

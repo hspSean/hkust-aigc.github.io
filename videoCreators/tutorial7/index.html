@@ -87,7 +87,7 @@
           Text2Video-Zero modifies the text-to-image model architecture by replacing self-attention with cross-frame attention, having each frame attend to the first frame to generate videos. Therefore, those pre-trained model is vital when you start to produce your video by using Text2Vide-Zero. In this way, I will discuss three famous pre-trained models for this demo.
         </span>
         <span>
-          First is runwayml/stable-diffusion-v1-5. After extensive experiments on Hugging Face, this pre-trained stable diffusion model contains diverse characters like animals, human and robots. It' s quite a comprehensive model for generating realistic video elements. Moreover, since the project utilized stable diffusion model during research, this model is well-adapted and consistently produces above-baseline results. In a word, by using this model, it generates good quality videos, though not always the best. Here are some nice examples produced by this model:
+          First is runwayml/stable-diffusion-v1-5. After several experiments on Hugging Face, I found out this pre-trained stable diffusion model contains diverse characters like animals, human and robots. It' s quite a comprehensive model for generating realistic video elements. Moreover, since the project utilized stable diffusion model during research, this model is well-adapted and consistently produces above-baseline results. In a word, by using this model, it generates good quality videos, though not always the best. Here are some nice examples produced by this model:
         </span>
 
         <div class = "video-grid">
@@ -250,7 +250,15 @@
         As you can see, using more frames consistently produces better visual results without impacting time. Maximum frame length allows the model to create the best possible videos.
         </span>
         <span>
-        Global Translation (delta_x, delta_y) - These values control the global scene motion and camera movement described in the text prompt. Adjusting delta_x and delta_y guides the model to add appropriate left-right and up-down camera motions fitting the caption narrative.
+        Global Translation (<math><mrow><mi>&delta;</mi>  
+          <msub> <mi>x</mi> </msub>
+        </mrow></math>, <math><mrow><mi>&delta;</mi>  
+          <msub> <mi>y</mi> </msub>
+        </mrow></math>) - These values control the global scene motion and camera movement described in the text prompt. Adjusting <math><mrow><mi>&delta;</mi>  
+          <msub> <mi>x</mi> </msub>
+        </mrow></math> and <math><mrow><mi>&delta;</mi>  
+          <msub> <mi>y</mi> </msub>
+        </mrow></math> guides the model to add appropriate left-right and up-down camera motions fitting the caption narrative.
         </span>
         <div class = "video-grid">
           <div class ="video-item">
@@ -268,7 +276,11 @@
       </p>
 
       <p class = "Text">
-        <span>The first three videos demonstrate the effect of changing the delta_y parameter. The delta_y values used are 12, 16, and 20.</span>
+        <span>The first three videos demonstrate the effect of changing the <math><mrow><mi>&delta;</mi>  
+          <msub> <mi>y</mi> </msub>
+        </mrow></math> parameter. The <math><mrow><mi>&delta;</mi>  
+          <msub> <mi>y</mi> </msub>
+        </mrow></math> values used are 12, 16, and 20.</span>
         <div class = "video-grid">
           <div class = "video-item">
             <video src="/videos/Text2Video-Zero/an astronaut is skiing down the hill/delta16_12.mp4" alt="Video 4" controls></video>
@@ -283,7 +295,12 @@
         </div>
       </p>
       <p class = "Text">
-        <span>The next three videos showcase the impact of adjusting the delta_x parameter. These videos use delta_x values of 12, 16, and 20.</span>
+        <span>The next three videos showcase the impact of adjusting the 
+          <math><mrow><mi>&delta;</mi>  
+            <msub> <mi>x</mi> </msub>
+          </mrow></math> parameter. These videos use <math><mrow><mi>&delta;</mi>  
+            <msub> <mi>x</mi> </msub>
+          </mrow></math> values of 12, 16, and 20.</span>
       </p>
 
       <p class = "Text">
@@ -299,6 +316,16 @@
       <p class = "Text">
         <span>
         Collectively, Text2Video-Zero offers you an impressive AI-powered tool for generating realistic videos from text prompts. Hopefully this tutorial provides guidance for effectively using Text2Video-Zero.
+        </span>
+      </p>
+
+      <h3 class = "Subtitle">
+        <span> Reference </span>
+      </h3>
+
+      <p class = "Text">
+        <span>
+          Khachatryan, L. (2023, March 23). Text2Video-Zero: Text-to-Image Diffusion Models are Zero-Shot Video Generators. arXiv.org. <a href = "https://arxiv.org/abs/2303.13439">https://arxiv.org/abs/2303.13439 </a>
         </span>
       </p>
 
