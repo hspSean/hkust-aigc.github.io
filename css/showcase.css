@@ -8,16 +8,9 @@ p {
   margin-bottom: 20px;
 }
 
-.video-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
 table {
   border-collapse: collapse;
-  width: 100%;
-  max-width: 1200px;
+  width: 75%;
   margin: 0 auto;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   overflow: hidden;
