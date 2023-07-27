@@ -95,13 +95,15 @@
               <li>
                 Sampling steps : the number of sampling steps used adjusts how much the diffusion model denoises the data (which in a diffusion model is 100% random noise) per step. At every step the model is predicting what the image is supposed to look like. Adding more steps implies that execution will take longer but at every step the model is making a probabilistic assumption based on a less noisy image.
               </li>
-              <li> CFG scale : Stands for Coefficient of Fluctuation Growth. </li>
+            <!-- Mention in the paper where this comes up when you're talking about variance in the diffusion process -->
+              <li> CFG scale : Stands for Coefficient of Fluctuation Growth. Adjusting this scale adjusts how faithful the generated output is to the prompt. It quantifies the rate of change of the variance of a diffusion process. 
+            <div class = "video-grid>
+              <video src = /videos/teddy_bear_playing_piano_high_definition_4k_1.mp4" alt = "1 Sampling Step">
+            </div>
+              </li> 
               <li> ETA : </li>
-              <li> LoRA scale : </li>
+              <li> LoRA scale : LoRA is a finetuning model that can be used to train the base diffusion model on more specialised datasets to generate results with different features.  </li>
           </ul>
-
-          ETA : 
-
 
         </span>
       </p>
