@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang = "en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta name = "description" content="A studio that shows videos produced by generative AI">
+  <meta name = "keywords" content="Generative AI,video,github">
+  <meta name = "viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title> HKUST AIGC Studio</title>
+
+  <link rel = "stylesheet" href = "/css/reset.css">
+  <link rel = "stylesheet" href = "/css/pageStyle.css">
+  <link rel = "stylesheet" href = "/css/topbar.css">
+  <link rel = "stylesheet" href = "/css/tutorial.css">
+  <link rel = "stylesheet" href = "/css/videoSytle.css">
+</head>
+
+<body>
+  <!--top navigation-->
+
+  <div class = "topbar">
+
+    <div class = "container clearfix">
+      <!--logo-->
+
+      <div class = "topbar-icon leftfix">
+        <a href = "/"> <img class = "logo" src="/images/logo.png" alt="HKUST AIGC logo"> </a>
+      </div>
+
+      <!--navigation-->
+
+      <div class = "topbar-navigation rightfix">
+        <ul class = "list clearfix">
+          <li> 
+            <a href= "/explore"> Explore</a> 
+          </li>
+          <li> 
+            <a href="/showcase" > Showcase </a> 
+          </li>
+        </ul>
+
+        <div class = "Creator">
+          <a href="/videoCreators"> 
+            <button> Create </button>
+          </a> 
+        </div>
+
+        <div class = "searchBox">
+          <form action = "/search/creations/">
+            <input type = "text" name = "searchText" placeholder = "Search HKUST AIGC Studio">
+            <button> search </button>
+          </form> 
+        </div>
+        
+      </div>
+
+    </div>
+  </div>
+
+  <!--Never modify the above code to avoid ruining the website-->
+
+  <div class = "tutorial">
+
+    <!--The following is what you need to modify-->
+    <!--This a template which contains title, subtitle and text part of your article-->
+    <!---->
+
+    <article> 
+      <h2 class = "Title"> Fatezero </h2>
+
+      <!--The following includes a subtitle and a text-->
+      <h3 class = "Subtitle"> 
+        <span> Introduction of Fatezero
+        </span>
+      </h3>
+      <p class = "Text">
+        <!--It is also recommend to wrap each paragraph with <span> tags.--> 
+        <span> 
+          <!-- &nbsp is a character entity reference that stands for "non-breaking space."-->
+          &nbsp; &nbsp; Generating and editing visual content with text prompts has become an exciting new capability enabled by recent advances in AI. However, due to the enormous randomness in the generation process, applying such models to real-world visual content editing, especially for videos, remains challenging. In this studio, we present FateZero, a novel zero-shot text-based video editing tool that allows users to make targeted edits to real-world video content without any per-prompt training or use-specific masking.
+          To make the tool more accessible, I will demonstrate the steps using Hugging Face Space at https://huggingface.co/spaces/chenyangqi/FateZero.
+          
+        </span>
+      </p>
+
+      <!--You can copy the above part yourself to write the remaining parts-->
+
+      <br> <!--It is used to create a line break or a new line-->
+
+      <h3 class = "Subtitle">
+        <span> Idea of building Fatezero </span>
+      </h3>
+      <p class = "Text">
+        <span>
+          &nbsp; &nbsp; We introduce several techniques to enable consistent video editing based on pre-trained models. 
+
+          First, in contrast to straightforward DDIM inversion, our approach captures intermediate attention maps during inversion conditioned on the source prompt, effectively retaining both structural and motion information. These maps are directly fused in the editing process rather than regenerated during denoising. 
+          
+          To further minimize semantic leakage from the source video, we fuse self-attentions with a blending mask derived from the cross-attention features of the source prompt. Furthermore, we reformulate the self-attention mechanism in the denoising UNet via spatial-temporal attention to ensure frame consistency.
+        </span>
+      </p>
+      
+      <!--
+        You can use the below code part to show your demo videos in the sytle that the website adopts
+      -->
+      
+      <!-- <div class = "video-grid">
+        <div class ="video-item">
+          <video src="your_video1.mp4" alt="Video 1" controls>
+        </div>
+            
+        <div class ="video-item">
+          <video src="your_video2.mp4" alt="Video 2" controls>
+        </div>
+      </div> -->
+
+      <br>
+
+      <h3 class = "Subtitle">
+        <span> Significance of Fatezero
+        </span>
+      </h3>
+      <p class = "Text">
+        <span>
+          &nbsp; &nbsp; Although brief, our tool represents the first demonstration of the ability of zero-shot text-driven video style and local attribute editing from the trained text-to-image model. We also achieve improved zero-shot shape-aware editing based on a one-shot text-to-video model. Extensive experiments demonstrate superior temporal consistency and editing capabilities compared to previous works.
+        </span>
+      </p>
+
+      <br>
+
+      <h3 class = "Subtitle">
+        <span> Usage of Fatezero </span>
+      </h3>
+      <p class = "Text">
+        <span>
+          &nbsp; &nbsp; In the tool, we need to upload our unedited video and choose one model for use first. Second, we will enter what we want to change(e.g., the video into Ukiyo-e Style). Then, we will change FateZero parameters for attention fusing in the output interface. In terms of Cross-att replace steps, more steps mean replacing more cross-attention to preserve the semantic layout. Besides, in terms of self-att replace steps, more steps mean replacing more spatial-temporal self-attention to preserve geometry and motion. However, more steps also mean more time for computing and figuring.
+        </span>
+      </p>
+
+      <br> 
+
+      <h3 class = "Subtitle">
+        <span> Conclusion </span>
+      </h3>
+      <p class = "Text">
+        <span>
+          &nbsp; &nbsp; Collectively, Fatezero offers you an impressive AI-powered tool for real-world visual content editing. Hopefully, this tutorial provides an introduction and guidance for effectively using Fatezero.
+
+        </span>
+      </p>
+      <br> 
+
+      <h3 class = "Subtitle">
+        <span> Reference </span>
+      </h3>
+      <p class = "Text">
+        <span>
+          &nbsp; &nbsp; Chenyang Qi (2023, March)FateZero: Fusing Attentions for Zero-shot Text-based Video Editing arXiv.org.https://arxiv.org/abs/2303.09535
+
+        </span>
+      </p>
+      <!--It' s up to you to write more-->
+
+    </article>
+
+  </div>
+</body>
