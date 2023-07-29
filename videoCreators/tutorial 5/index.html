@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang = "en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta name = "description" content="A studio that shows videos produced by generative AI">
+  <meta name = "keywords" content="Generative AI,video,github">
+  <meta name = "viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title> HKUST AIGC Studio</title>
+
+  <link rel = "stylesheet" href = "/css/reset.css">
+  <link rel = "stylesheet" href = "/css/pageStyle.css">
+  <link rel = "stylesheet" href = "/css/topbar.css">
+  <link rel = "stylesheet" href = "/css/tutorial.css">
+  <link rel = "stylesheet" href = "/css/videoSytle.css">
+</head>
+
+<body>
+  
+  <!--top navigation-->
+
+  <div class = "topbar">
+
+    <div class = "container clearfix">
+      <!--logo-->
+
+      <div class = "topbar-icon leftfix">
+        <a href = "/"> <img class = "logo" src="/images/logo.png" alt="HKUST AIGC logo"> </a>
+      </div>
+
+      <!--navigation-->
+
+      <div class = "topbar-navigation rightfix">
+        <ul class = "list clearfix">
+          <li> 
+            <a href= "/explore"> Explore</a> 
+          </li>
+          <li> 
+            <a href="/showcase" > Showcase </a> 
+          </li>
+        </ul>
+
+        <div class = "Creator">
+          <a href="/videoCreators"> 
+            <button> Create </button>
+          </a> 
+        </div>
+
+        <div class = "searchBox">
+          <form action = "/search/creations/">
+            <input type = "text" name = "searchText" placeholder = "Search HKUST AIGC Studio">
+            <button> search </button>
+          </form> 
+        </div>
+        
+      </div>
+
+    </div>
+  </div>
+
+  <div class = "tutorial">
+
+    <article> 
+      <h2 class = "Title"> <span> Text2Video-Zero </span></h2>
+      <h3 class = "Author"> <span>FEI, Yang</span> </h3>
+
+      <h3 class = "Subtitle"> 
+        <span> Introduction </span>
+      </h3>
+      <p class = "Text"> 
+        <span> 
+          Text-to-video generation is quite popular nowadays due to advances in AI-powered text-to-image tasks. Text2Video-Zero is the first tool to enable zero-shot text-to-video generation, proposing an approach is low-cost yet produces quality video output.
+        </span>
+        <span>
+          In this article, I will introduce the different parameters of this AI-powered tool to guide you through creating your own video. To make the tool more accessible, I will demonstrate the steps using Hugging Face Space at 
+          <a href = "https://huggingface.co/spaces/PAIR/Text2Video-Zero"> https://huggingface.co/spaces/PAIR/Text2Video-Zero</a>.
+        </span>
+      </p>
+
+      <br>
+
+
+      <h3 class = "Subtitle">
+        <span> Model </span>
+      </h3>
+      <p class = "Text">
+        <span>
+          Text2Video-Zero modifies the text-to-image model architecture by replacing self-attention with cross-frame attention, having each frame attend to the first frame to generate videos. Therefore, those pre-trained model is vital when you start to produce your video by using Text2Vide-Zero. In this way, I will discuss three famous pre-trained models for this demo.
+        </span>
+        <span>
+          First is runwayml/stable-diffusion-v1-5. After several experiments on Hugging Face, I found out this pre-trained stable diffusion model contains diverse characters like animals, human and robots. It' s quite a comprehensive model for generating realistic video elements. Moreover, since the project utilized stable diffusion model during research, this model is well-adapted and consistently produces above-baseline results. In a word, by using this model, it generates good quality videos, though not always the best. Here are some nice examples produced by this model:
+        </span>
+
+        <div class = "video-grid">
+          <div class ="video-item">
+            <video src="/videos/Text2Video-Zero/a dog reading a book/runwayml_stable-diffusion-v1-5.mp4" alt="Video 1" controls>
+          </div>
+              
+          <div class ="video-item">
+            <video src="/videos/Text2Video-Zero/an iron man flying in the sky/runwayml_stable-diffusion-v1-5.mp4" alt="Video 2" controls>
+          </div>
+
+          <div class ="video-item">
+            <video src="/videos/Text2Video-Zero/a cute cat walking on grass/runwayml_stable-diffusion-v1-5.mp4" alt="Video 2" controls>
+          </div>
+        </div>
+      </p>
+
+      <p class = "Text">
+        <span>
+          Secondly, I would recommend dreamlike-art/dreamlike-photoreal-2.0 model, which is also well suited for this project. Like runwayml/stable-diffusion-v1-5, it is a large pre-trained model. Although not used as a benchmark in the Text2Video-Zero paper, the dreamlike-photoreal-2.0 model can generate high quality, visually appealing videos and therefore it’ s a popular model on Hugging Face. Here are three examples of videos produced by this model:
+        </span>
+        
+        <div class = "video-grid">
+          <div class ="video-item">
+            <video src="/videos/Text2Video-Zero/a dog reading a book/dreamlike-art_dreamlike-photoreal-2.0.mp4" alt="Video 1" controls>
+          </div>
+                
+          <div class ="video-item">
+            <video src="/videos/Text2Video-Zero/an iron man flying in the sky/dreamlike-art_dreamlike-photoreal-2.0.mp4" alt="Video 2" controls>
+          </div>
+  
+          <div class ="video-item">
+            <video src="/videos/Text2Video-Zero/a cute cat walking on grass/dreamlike-art_dreamlike-photoreal-2.0.mp4" alt="Video 2" controls>
+          </div>
+        </div>
+      </p>
+      <p class = "Text">
+        <span>
+          Thirdly, I recommend the timlenardo/tdmx-edge-of-realism-dreambooth model, which is another text-to-image pre-trained model that generates highly realistic and visually stunning videos with Text2Video-Zero. This model produces remarkably consistent videos through its capability to generate high-quality images. More importantly, the videos are coherent over time and pleasing to watch. Below are some gorgeous videos produced by this model:
+        </span>
+
+        <div class = "video-grid">
+          <div class ="video-item">
+            <video src="/videos/Text2Video-Zero/a dog reading a book/timlenardo_tdmx-edge-of-realism-dreambooth.mp4" alt="Video 1" controls>
+          </div>
+                
+          <div class ="video-item">
+            <video src="/videos/Text2Video-Zero/an iron man flying in the sky/timlenardo_tdmx-edge-of-realism-dreambooth.mp4" alt="Video 2" controls>
+          </div>
+  
+          <div class ="video-item">
+            <video src="/videos/Text2Video-Zero/a cute cat walking on grass/timlenardo_tdmx-edge-of-realism-dreambooth.mp4" alt="Video 2" controls>
+          </div>
+        </div>
+      </p>
+
+      <h3 class = "Subtitle">
+        <span> Prompt </span>
+      </h3>
+      <p class = "Text">
+        <span>
+          Prompt engineering has become very popular and important in recent times with the advancement of AI-powered chatbots. While I won't go into details here, it is worth briefly explaining prompt engineering and how it applies to Text2Video-Zero.
+        </span>
+        <span>
+          Prompt engineering involves carefully crafting the text prompts provided to AI systems in order to get better, more accurate, and more diverse results.
+        </span>
+        <span>
+          The prompts used in Text2Video-Zero are similar to other text-to-image models. Some examples are:
+        </span>   
+
+        <ul>
+          <li>
+            <span>
+              "A horse galloping on a street, high quality detailed realistic video"
+            </span>
+          </li>
+          <li>
+            <span>
+              "A panda dancing in Antarctica, trending on ArtStation"
+             </span>  
+          </li>
+        </ul>
+      </p>
+      
+      <p class = "Text">
+        <span>
+        I will provide two examples that demonstrate how modifying the text prompt results in different generated videos from Text2Video-Zero.
+        </span>  
+        <span>
+        The adjectives used in a prompt can significantly impact the generated video from Text2Video-Zero. As an example, I generated two videos using the timlenardo/tdmx-edge-of-realism-dreambooth model, which is a high quality text-to-image model. The left video used the prompt "a cute cat walking on the grass" while the right video used "a cat walking on grass". All other options were kept the same.
+        </span>
+
+        <div class = "video-grid">
+          <div class ="video-item">
+            <video src="/videos/Text2Video-Zero/a cute cat walking on grass/timlenardo_tdmx-edge-of-realism-dreambooth.mp4" alt="Video 1" controls>
+          </div>
+                
+          <div class ="video-item">
+            <video src="/videos/Text2Video-Zero/a cat walking on grass/timlenardo_tdmx-edge-of-realism-dreambooth.mp4" alt="Video 2" controls>
+          </div>
+        </div>
+      </p>
+
+      <p class="Text">
+        <span>
+        The difference is clear - the left video shows cat’ s positive face while The right video depicts another angle. This demonstrates how small changes in the prompt wording can guide the model to produce noticeably different results. Carefully choosing descriptive words is an important part of prompt engineering to get better quality and more accurate videos from Text2Video-Zero.
+        </span>
+      </p>
+
+      <p class = "Text">
+        <span>
+          What’ s more, using a complete sentence versus a description also impacts the coherence of Text2Video-Zero's output. For example, the prompt "a dog is reading a book" generates a video where the dog's pose and surroundings change inconsistently. However, the prompt "a dog reading a book" produces a more consistent video showing the dog in the same position reading. 
+        </span>
+
+        <div class = "video-grid">
+          <div class ="video-item">
+            <video src="/videos/Text2Video-Zero/a dog is reading a book/timlenardo_tdmx-edge-of-realism-dreambooth.mp4" alt="Video 1" controls>
+          </div>
+                
+          <div class ="video-item">
+            <video src="/videos/Text2Video-Zero/a dog reading a book/timlenardo_tdmx-edge-of-realism-dreambooth.mp4" alt="Video 2" controls>
+          </div>
+        </div>
+      </p>
+      <p class="Text">
+        <span>
+        The left video varies randomly frame to frame. But the right video depicts the dog continuously reading, by simply describing the subject and action. This shows that prompt phrasing impacts visual coherence, and complete sentences can sometimes confuse the model.
+        </span>
+      </p>
+
+      <br>
+
+      <h3 class = "Subtitle">
+        <span> Advanced Options </span>
+      </h3>
+
+      <p class = "Text">
+        <span>
+          Text2Video-Zero provides some advanced options to further control video generation. I will discuss three key ones:
+        </span>
+
+        <span>
+          Video Length - This specifies the number of frames in the generated 3-4 second video. More frames result in smoother, higher quality videos. Interestingly, increasing video length in Text2Video-Zero improves quality without slowing generation. The left video has 8 frames, the right has 16 frames. 
+        </span>
+
+        <div class = "video-grid">
+          <div class ="video-item">
+            <video src="/videos/Text2Video-Zero/a cat walking on grass/8frame.mp4" alt="Video 1" controls>
+          </div>
+          <div class ="video-item">
+            <video src="/videos/Text2Video-Zero/a cat walking on grass/12frame.mp4" alt="Video 2" controls>
+          </div>      
+          <div class ="video-item">
+            <video src="/videos/Text2Video-Zero/a cat walking on grass/16frame.mp4" alt="Video 3" controls>
+          </div>
+        </div>
+      </p>
+      <p class = "Text">
+        <span>
+        As you can see, using more frames consistently produces better visual results without impacting time. Maximum frame length allows the model to create the best possible videos.
+        </span>
+        <span>
+        Global Translation (<math><mrow><mi>&delta;</mi>  
+          <msub> <mi>x</mi> </msub>
+        </mrow></math>, <math><mrow><mi>&delta;</mi>  
+          <msub> <mi>y</mi> </msub>
+        </mrow></math>) - These values control the global scene motion and camera movement described in the text prompt. Adjusting <math><mrow><mi>&delta;</mi>  
+          <msub> <mi>x</mi> </msub>
+        </mrow></math> and <math><mrow><mi>&delta;</mi>  
+          <msub> <mi>y</mi> </msub>
+        </mrow></math> guides the model to add appropriate left-right and up-down camera motions fitting the caption narrative.
+        </span>
+        <div class = "video-grid">
+          <div class ="video-item">
+            <video src="/videos/Text2Video-Zero/an astronaut is skiing down the hill/delta12_12.mp4" alt="Video 1" controls>
+          </div>
+              
+          <div class ="video-item">
+            <video src="/videos/Text2Video-Zero/an astronaut is skiing down the hill/delta12_16.mp4" alt="Video 2" controls>
+          </div>
+
+          <div class ="video-item">
+            <video src="/videos/Text2Video-Zero/an astronaut is skiing down the hill/delta12_20.mp4" alt="Video 3" controls>
+          </div>
+        </div>
+      </p>
+
+      <p class = "Text">
+        <span>The first three videos demonstrate the effect of changing the <math><mrow><mi>&delta;</mi>  
+          <msub> <mi>y</mi> </msub>
+        </mrow></math> parameter. The <math><mrow><mi>&delta;</mi>  
+          <msub> <mi>y</mi> </msub>
+        </mrow></math> values used are 12, 16, and 20.</span>
+        <div class = "video-grid">
+          <div class = "video-item">
+            <video src="/videos/Text2Video-Zero/an astronaut is skiing down the hill/delta16_12.mp4" alt="Video 4" controls></video>
+          </div>
+
+          <div class = "video-item">
+            <video src="/videos/Text2Video-Zero/an astronaut is skiing down the hill/delta20_12.mp4" alt="Video 5" controls></video>
+          </div>
+          <div class = "video-item">
+            <video src="/videos/Text2Video-Zero/an astronaut is skiing down the hill/delta20_20.mp4" alt="Video 6" controls></video>
+          </div>
+        </div>
+      </p>
+      <p class = "Text">
+        <span>The next three videos showcase the impact of adjusting the 
+          <math><mrow><mi>&delta;</mi>  
+            <msub> <mi>x</mi> </msub>
+          </mrow></math> parameter. These videos use <math><mrow><mi>&delta;</mi>  
+            <msub> <mi>x</mi> </msub>
+          </mrow></math> values of 12, 16, and 20.</span>
+      </p>
+
+      <p class = "Text">
+        <span>
+        Carefully tuning these advanced parameters allows generating higher resolution videos with logical camera movements aligned to the descriptive text prompt. Text2Video-Zero enables granular control over video characteristics like length, motion and scene composition through both prompt wording and configurable model settings.
+        </span>
+      </p>
+
+      <h3 class = "Subtitle">
+        <span> Conclusion </span>
+      </h3>
+
+      <p class = "Text">
+        <span>
+        Collectively, Text2Video-Zero offers you an impressive AI-powered tool for generating realistic videos from text prompts. Hopefully this tutorial provides guidance for effectively using Text2Video-Zero.
+        </span>
+      </p>
+
+      <h3 class = "Subtitle">
+        <span> Reference </span>
+      </h3>
+
+      <p class = "Text">
+        <span>
+          Khachatryan, L. (2023, March 23). Text2Video-Zero: Text-to-Image Diffusion Models are Zero-Shot Video Generators. arXiv.org. <a href = "https://arxiv.org/abs/2303.13439">https://arxiv.org/abs/2303.13439 </a>
+        </span>
+      </p>
+
+    </article>
+
+  </div>
+</body>
