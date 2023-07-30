@@ -118,7 +118,8 @@
 
       <p class = "Text">
         <span>
-          The first video is of a person break dancing with th prompt "man dancing in CG style", the second is a person looking at the camera without much mmovement with the prompt "a woman in CG style".
+          The first video is of a person break dancing with the prompt "man dancing in CG style", the second is a person looking at the camera 
+          without much movement with the prompt "a woman in CG style".
         </span>
         
         <div class = "video-grid">
@@ -165,6 +166,28 @@
             <video src="/videos/Rerender a Video/Rerender a video examples/a man with an eyepatch in CG style Controlnet 0.2.mp4" alt="Video 2" controls>
           </div>
         </div>
+
+      <p class = "Text">
+        <span>
+          Negative prompts are also very helpful for solving issues.
+        </span>  
+        <span>
+          I encountered a bug where the the subject would be generated into a room for some reason despite using the same settings and prompt. 
+          So i had to add "room" in the negative prompt so this won't happen 
+        </span>  
+
+        <div class = "video-grid">
+          <div class ="video-item">
+            <video src="/videos/Rerender a Video/Rerender a video examples/a one eyed man in CG style Controlnet 0.2.mp4" alt="Video 1" controls>
+          </div>
+          <div class ="video-item">
+            <video src="/videos/Rerender a Video/Rerender a video examples/a man with one eye in CG style ControlNet 0.2.mp4" alt="Video 2" controls>
+          </div>
+          <div class ="video-item">
+            <video src="/videos/Rerender a Video/Rerender a video examples/a man with an eyepatch in CG style Controlnet 0.2.mp4" alt="Video 2" controls>
+          </div>
+        </div>
+      
       </p>
 
       <p class="Text">
@@ -185,9 +208,31 @@
         <span>
           Rerender a video provides some advanced options to finetune generation for the first keyframe. I will discuss a few key ones:
         </span>
-
         <span>
-          ControlNet Strength - This specifies the number of frames in the generated 3-4 second video. More frames result in smoother, higher quality videos. Interestingly, increasing video length in Text2Video-Zero improves quality without slowing generation. The left video has 8 frames, the right has 16 frames. 
+          ControlNet Strength - The ControlNet
+        </span>
+
+        <div class = "video-grid">
+          <div class ="video-item">
+            <video src="/videos/Text2Video-Zero/a cat walking on grass/8frame.mp4" alt="Video 1" controls>
+          </div>
+          <div class ="video-item">
+            <video src="/videos/Text2Video-Zero/a cat walking on grass/12frame.mp4" alt="Video 2" controls>
+          </div>      
+          <div class ="video-item">
+            <video src="/videos/Text2Video-Zero/a cat walking on grass/16frame.mp4" alt="Video 3" controls>
+          </div>
+        </div>
+        <span>
+        As you can see, using more frames consistently produces better visual results without impacting time. Maximum frame length allows the model to create the best possible videos.
+        </span>
+      </p>
+        
+      <p class = "Text">
+        <span>
+          Denoising strength - As image generation works by adding and removing noise, the more noise you add and remove, the more the input is changed. 
+          0: fully recover the input.(Outputted keyframes are the same as input). 1.05: fully rerender the input.(Outputted leyframes are completely 
+          different from input) 
         </span>
 
         <div class = "video-grid">
