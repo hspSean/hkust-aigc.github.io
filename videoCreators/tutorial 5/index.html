@@ -166,36 +166,42 @@
             <video src="/videos/Rerender a Video/Rerender a video examples/a man with an eyepatch in CG style Controlnet 0.2.mp4" alt="Video 2" controls>
           </div>
         </div>
-
+      
+      <p class="Text">
+        <span>
+          The model seems to understand what "one eyed man" and "man with one eye" means as it shows them wearing an eyepatch in one of the keyframes. However, it
+          doesn't give the eyepatch on the first keyframe which is the most important. So if your prompt doesn't give you want you want, consider wording your 
+          prompt differently.
+        </span>
+      </p>
+      
       <p class = "Text">
         <span>
-          Negative prompts are also very helpful for solving issues.
+          Negative prompts are also very helpful for solving issues. The negative prompt can be accessed in the Advanced options for the 1st frame translation. 
         </span>  
         <span>
-          I encountered a bug where the the subject would be generated into a room for some reason despite using the same settings and prompt. 
-          So i had to add "room" in the negative prompt so this won't happen which quickly fixed the problem.
+          I encountered a bug where the the subject would be generated into a room for some reason despite the prompt "a beautiful women in cg style" which 
+          makes no mention of a room. 
+          So i had to add "room" in the negative prompt so this won't happen which quickly fixed the problem. 
         </span>  
 
         <div class = "video-grid">
           <div class ="video-item">
-            <video src="/videos/Rerender a Video/Rerender a video examples/a one eyed man in CG style Controlnet 0.2.mp4" alt="Video 1" controls>
+            <video src="/videos/Rerender a Video/Rerender a video examples/room 3.mp4" alt="Video 1" controls>
           </div>
           <div class ="video-item">
-            <video src="/videos/Rerender a Video/Rerender a video examples/a man with one eye in CG style ControlNet 0.2.mp4" alt="Video 2" controls>
+            <video src="/videos/Rerender a Video/Rerender a video examples/room 2.mp4" alt="Video 2" controls>
           </div>
           <div class ="video-item">
-            <video src="/videos/Rerender a Video/Rerender a video examples/a man with an eyepatch in CG style Controlnet 0.2.mp4" alt="Video 2" controls>
+            <video src="/videos/Rerender a Video/Rerender a video examples/a beautiful woman in CG style negative prompt room.mp4" alt="Video 2" controls>
           </div>
         </div>
-      
-      </p>
 
-      <p class="Text">
         <span>
-          The model seems to understand what one eyed man and man with one eye means as it shows them wearing an eyepatch in one of the keyframes. However, it
-          doesn't give the eyepatch on the first keyframe which is the most important. So if your prompt doesn't give you want you want, consider wording your 
-          prompt differently.
-        </span>
+          The first time it happened I was confused and though it just random, and the second time I realized it might be a bug so the third time around, I fixed it by adding room to
+           the negative prompt.
+        </span>  
+      
       </p>
 
       <br>
@@ -209,30 +215,34 @@
           Rerender a video provides some advanced options to finetune generation for the first keyframe. I will discuss a few key ones:
         </span>
         <span>
-          ControlNet Strength - The ControlNet
+          ControlNet Strength - The ControlNet improves temporal consistancy but might limit the effect of the prompt. I suggest 
+          lowering the ControlNet strength to 0.2 if the first keyframe doesn't give you the result you want. In the following example, 
+          i used the prompt "a man with an eyepatch in CG style".
         </span>
 
         <div class = "video-grid">
           <div class ="video-item">
-            <video src="/videos/Text2Video-Zero/a cat walking on grass/8frame.mp4" alt="Video 1" controls>
+            <video src="/videos/Rerender a Video/Rerender a video examples/a man with an eyepatch in CG style Controlnet 0.7.mp4" alt="Video 1" controls>
           </div>
           <div class ="video-item">
-            <video src="/videos/Text2Video-Zero/a cat walking on grass/12frame.mp4" alt="Video 2" controls>
+            <video src="/videos/Rerender a Video/Rerender a video examples/a man with an eyepatch in CG style Controlnet 0.5.mp4" alt="Video 2" controls>
           </div>      
           <div class ="video-item">
-            <video src="/videos/Text2Video-Zero/a cat walking on grass/16frame.mp4" alt="Video 3" controls>
+            <video src="/videos/Rerender a Video/Rerender a video examples/a man with an eyepatch in CG style Controlnet 0.2.mp4" alt="Video 3" controls>
           </div>
         </div>
         <span>
-        As you can see, using more frames consistently produces better visual results without impacting time. Maximum frame length allows the model to create the best possible videos.
+          The first video has ControlNet strength 0.7 which only shows an eyepatch for one keyframe, same for the second video which has ControlNet strength
+           0.5. It is only for the last video which has ControlNet strength 0.2 that the eyepatch is present in all keyframes.
         </span>
       </p>
         
       <p class = "Text">
         <span>
           Denoising strength - As image generation works by adding and removing noise, the more noise you add and remove, the more the input is changed. 
-          0: fully recover the input.(Outputted keyframes are the same as input). 1.05: fully rerender the input.(Outputted leyframes are completely 
-          different from input) 
+          Denoising strength of 0 fully recovers the input.(Outputted keyframes are the same as input). Denoising strength of 1.05 fully rerenders the 
+          input.(Outputted leyframes are completely 
+          different from input). In the following example, the prompt "beautiful women in CG style" is used.
         </span>
 
         <div class = "video-grid">
@@ -241,13 +251,14 @@
           </div>
           <div class ="video-item">
             <video src="/videos/Text2Video-Zero/a cat walking on grass/12frame.mp4" alt="Video 2" controls>
-          </div>      
+          </div>
           <div class ="video-item">
-            <video src="/videos/Text2Video-Zero/a cat walking on grass/16frame.mp4" alt="Video 3" controls>
+            <video src="/videos/Text2Video-Zero/a cat walking on grass/8frame.mp4" alt="Video 3" controls>
           </div>
         </div>
         <span>
-        As you can see, using more frames consistently produces better visual results without impacting time. Maximum frame length allows the model to create the best possible videos.
+          The first video is the original video, the second video has Denoise strength of 0.2, which is very similar to original video and the third 
+          has Denoise strength of 0.5 which is very different from the original video.
         </span>
       </p>
       
@@ -284,7 +295,8 @@
 
       <p class = "Text">
         <span>
-        Collectively, Text2Video-Zero offers you an impressive AI-powered tool for generating realistic videos from text prompts. Hopefully this tutorial provides guidance for effectively using Text2Video-Zero.
+          Rerender a video is just a demo which can only generate keyframes but it shows great potential as the key frames are very consistent and will be a 
+          the powerful tool if the keyframe propagation works as intended.
         </span>
       </p>
 
@@ -294,7 +306,7 @@
 
       <p class = "Text">
         <span>
-          Khachatryan, L. (2023, March 23). Text2Video-Zero: Text-to-Image Diffusion Models are Zero-Shot Video Generators. arXiv.org. <a href = "https://arxiv.org/abs/2303.13439">https://arxiv.org/abs/2303.13439 </a>
+          Shuai, Y., Yifan, Z., Ziwei, L., & Chen Change, L. (2023, June 14). Rerender A Video: Zero-Shot Text-Guided Video-to-Video Translation. arXiv.org. <a href = "https://arxiv.org/abs/2306.07954">https://arxiv.org/abs/2306.07954 </a>
         </span>
       </p>
 
